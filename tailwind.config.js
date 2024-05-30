@@ -7,6 +7,19 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        slide: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+      },
+      animation: {
+        slide: 'slide 20s linear infinite',
+      },
+      fontFamily:{
+        cc:['var(--font-cc)'],
+        dmmono:['var(--font-dmmono)'],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
