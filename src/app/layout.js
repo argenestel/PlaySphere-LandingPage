@@ -2,8 +2,8 @@ import { Inter ,Climate_Crisis, DM_Mono } from 'next/font/google'
 
 const cc = Climate_Crisis({
   subsets: ['latin'],
-  display: 'swap',
   variable: '--font-cc',
+  display: 'swap',
 })
  
 const dm_mono = DM_Mono({

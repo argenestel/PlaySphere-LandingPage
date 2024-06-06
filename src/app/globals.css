@@ -32,7 +32,14 @@ body {
     text-wrap: balance;
   }
 }
-
-.react-multi-carousel-track {
+.carousel-slider{
   height: 100%;
+}
+.slick-prev {
+  left: 100px !important;
+  background-color: red  !important; /*to notice it, is white*/
+}
+.slick-next {
+  right: 100px !important;
+  background-color: red  !important; /*to notice it, is white*/
 }

@@ -10,8 +10,7 @@ const Header = () => {
         <div className="bg-black h-1/2 overflow-hidden">
           <ImageSlider images={images} />
         </div>
-        <div></div>
-        <div></div>
+        <div className="bg-black h-1 w-full"></div>
         <div className="bg-black h-1/2 overflow-hidden">
           <ImageSlider images={images} direction={"right"} />
         </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const BenefitItem = ({ title, attribute }) => {
+const FeatureItem = ({ title, attribute }) => {
     return (
         <>
             <div className='h-[300px] w-[250px] border-[#c1ffb3] border-t-2 border-b-2 m-5 rounded-[50px] flex flex-col items-center justify-center'>
@@ -11,4 +11,4 @@ const BenefitItem = ({ title, attribute }) => {
     )
 }
 
-export default BenefitItem
+export default FeatureItem

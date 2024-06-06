@@ -1,51 +1,68 @@
 "use client";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 1,
-  },
-  tablet: {
-    breakpoint: { max: 770, min: 464 },
-    items: 1,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-  },
-};
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+import { FaChevronRight,FaChevronLeft } from "react-icons/fa6";
 
-const Carousal = () => {
+
+const Carousal = ({images}) => {
   return (
     <>
       <Carousel
-        responsive={responsive}
-        className="w-full h-full"
+      className="h-full"
         swipeable={false}
+        showStatus={false}
+        showArrows={true}
         draggable={false}
-        showDots={true}
-        ssr={true} // means to render carousel on server-side.
-        infinite={true}
-        autoPlay={false}
-        autoPlaySpeed={1000}
-        keyBoardControl={true}
-        customTransition="all .5"
-        transitionDuration={500}
-        deviceType={"desktop"}
+        infiniteLoop={true}
+        autoPlay={true}
+        showIndicators={true}
+        renderArrowPrev={(clickHandler, hasPrev) => {
+          return (
+            <div
+              className={`${
+                hasPrev ? "absolute" : "hidden"
+              } top-0 bottom-0 left-0 flex justify-center items-center p-3 cursor-pointer z-20`}
+              onClick={clickHandler}
+            >
+              <FaChevronLeft className="w-8 h-8 bg-black rounded-full p-2 text-white" />
+            </div>
+          );
+        }}
+        renderArrowNext={(clickHandler, hasNext) => {
+          return (
+            <div
+              className={`${
+                hasNext ? "absolute" : "hidden"
+              } top-0 bottom-0 right-0 flex justify-center items-center p-3 cursor-pointer z-20`}
+              onClick={clickHandler}
+            >
+              <FaChevronRight className="w-8 h-8 bg-black rounded-full p-2 text-white" />
+            </div>
+          );
+        }}
+        renderIndicator={(onClickHandler, isSelected, index, label) => {
+          return (
+            <button
+            className={`bg-black py-[7px] px-[5px] text-white ${index===0?'rounded-l-full':''} ${(index===images.length-1)?'rounded-r-full':''}`}
+              onClick={onClickHandler}
+              onKeyDown={onClickHandler}
+              value={index}
+              key={index}
+              role="button"
+              tabIndex={0}
+              aria-label={`${label} ${index + 1}`}
+            >
+              <div className={`rounded-full ${isSelected?'bg-[#c1ffb3]':'bg-[#c1ffb370]'} w-[8px] h-[8px]`}>
+              </div>
+            </button>
+          );
+        }}
       >
-        <div className="responsive h-full w-full">
-          <img className="w-full h-full object-cover" src={"/image.png"} />
+        {images.map((src,ind)=>{
+          return <div className="w-full h-full">
+          <img className="w-full md:h-[80vh] h-[400px] object-cover" alt="car-img" src={src} />
         </div>
-        <div className="responsive h-full w-full">
-          <img className="w-full h-full object-cover" src={"/aboutbg.webp"} />
-        </div>
-        <div className="responsive h-full w-full">
-          <img className="w-full h-full object-cover" src={"/image.png"} />
-        </div>
-        <div className="responsive h-full w-full">
-          <img className="w-full h-full object-cover" src={"/aboutbg.webp"} />
-        </div>
+        })}
       </Carousel>
     </>
   );
