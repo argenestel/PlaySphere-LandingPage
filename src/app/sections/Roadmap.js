@@ -1,97 +1,103 @@
-'use client';
+"use client";
 import React from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import RoadmapItem from "../components/RoadmapItem";
 import Slider from "react-slick";
 
+const images = ["/image.png", "/aboutbg.webp", "/image.png", "/aboutbg.webp"];
 
-const images = [
-  '/image.png',
-  '/aboutbg.webp',
-  '/image.png',
-  '/aboutbg.webp'
-]
-function LeftArrow(props) {
-  const { className, style, onClick } = props;
-  return ( 
-    <div
-      className={className}
-      style={{...style}}
-      onClick={onClick}
-    >
-      <FaChevronLeft className="w-8 h-8 bg-black rounded-full p-2 text-white" />
-    </div>
-  );
-}
-function RightArrow(props) {
+const LeftArrow = (props) => {
   const { className, style, onClick } = props;
   return (
-    <div
-      className={className}
-      style={{ ...style }}
-      onClick={onClick}
-    >
-      <FaChevronRight className=" w-8 h-8 bg-black rounded-full p-2 text-white" />
+    <div onClick={onClick} className={`arrow ${className}`}>
+      <FaChevronLeft class="arrows" style={{ color: "white" }} />
     </div>
   );
-}
+};
+const RightArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div onClick={onClick} className={`arrow ${className}`}>
+      <FaChevronRight class="arrows" style={{ color: "white" }} />
+    </div>
+  );
+};
+
+const roadmap = [
+  {
+    name: "Planning and Foundation",
+    item1: "Conceptualization",
+    item2: "Conceptualization",
+    item3: "Conceptualization",
+    item4: "Conceptualization",
+    item5: "Conceptualization",
+  },
+  {
+    name: "Planning and Foundation",
+    item1: "Conceptualization",
+    item2: "Conceptualization",
+    item3: "Conceptualization",
+    item4: "Conceptualization",
+    item5: "Conceptualization",
+  },
+  {
+    name: "Planning and Foundation",
+    item1: "Conceptualization",
+    item2: "Conceptualization",
+    item3: "Conceptualization",
+    item4: "Conceptualization",
+    item5: "Conceptualization",
+  },
+];
 
 const Roadmap = () => {
   const settings = {
-    className: "slider p-1 variable-width",
-    dots: true,
+    className: "slider rounded-[50px] overflow-hidden variable-width w-full",
     infinite: false,
-    centerMode: true,
-    slidesToShow: 1,
+    dots: false,
+    arrows: true,
     slidesToScroll: 1,
+    initalSlide: 0,
     variableWidth: true,
-    prevArrow: <LeftArrow className=" absolute right-0 bottom-0"/>,
-    nextArrow: <RightArrow />
+    centerMode: false,
+    responsive: [
+      {
+        breakpoint: 766,
+        settings: {
+          variableWidth: false,
+          centerMode: false,
+        },
+      },
+    ],
+    prevArrow: <LeftArrow to="prev" />,
+    nextArrow: <RightArrow to="next" />,
   };
   return (
     <>
-      {/* <div className=" text-black">
+      <div className="text-black slider-container p-3  w-full">
         <Slider {...settings}>
-          <div className="h-full m-1 object-cover w-[300px] rounded-[50px] overflow-hidden bg-gradient-to-b from-[#c1ffb3] to-white relative">
-            <div className="flex w-full h-full justify-center items-center -rotate-90">
-              <h1 className="text-5xl font-cc">ROADMAP</h1>
+          <div
+            style={{ width: 300 }}
+            className="w-[560px] md:w-[560px]  md:h-[100vh] h-[90vh]"
+          >
+            <div className="rounded-[50px] bg-gradient-to-b from-[#c1ffb3] to-white mx-2 h-full p-4 overflow-hidden">
+              <div className="flex justify-center items-center w-full h-full -rotate-90">
+                <h2 className="font-cc text-3xl md:text-6xl m-2">ROADMAP</h2>
+              </div>
             </div>
           </div>
-          <div className="h-full m-1 object-cover rounded-[50px] overflow-hidden  bg-red-300 relative">
-            <img src={'/image.png'} alt="car-img" layout="fill" objectFit="cover"></img>
-            <div className="absolute bottom-0 opacity-90 h-1/2 w-full bg-gradient-to-b from-[#c1ffb3] to-white">
-            </div>
-          </div>
-          <div className="h-full m-1 object-cover rounded-[50px] overflow-hidden  bg-red-300 relative">
-            <img src={'/image.png'} alt="car-img" layout="fill" objectFit="cover"></img>
-            <div className="absolute bottom-0 opacity-90 h-1/2 w-full bg-gradient-to-b from-[#c1ffb3] to-white">
-            </div>
-          </div>
+          {roadmap.map((item, ind)=>{
+      return <div
+        style={{ width: 650 }}
+        className="w-[560px] md:w-[560px] md:h-[100vh] h-[90vh]"
+      >
+        <RoadmapItem sour={item} ind={ind} />
+      </div>
+          })}
         </Slider>
-      </div > */}
-     <div className="slider-container w-full">
-      <Slider {...settings}>
-        <div>
-          <h3>1</h3>
-        </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
-      </Slider>
-    </div>
+      </div>
     </>
   );
 };
