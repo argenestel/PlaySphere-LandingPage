@@ -1,0 +1,42 @@
+.hamburgout:hover .hamburgin {
+    visibility: hidden;
+}
+
+.hamburgout:hover .sideicon {
+    transform: translate(100px);
+}
+.hamburgout:hover .hamblink{
+    visibility: visible;
+}
+
+.hamburgout:hover {
+    /* width: 500px; */
+    transition: all 0.5s ease 0s;
+}
+
+.hamburgout {
+    min-width: fit-content;
+    width: 0;
+    transition: all 0.5s ease 0s;
+}
+
+.hamburgcont {
+    min-width: 0;
+    transition: all 0.5s ease 0s;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hamburgcont a{
+    visibility: hidden;
+}
+
+.hamburgout:hover .hamburgcont {
+    min-width: 500px;
+}

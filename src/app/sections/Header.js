@@ -25,6 +25,16 @@ const Header = () => {
           </p>
         </div>
       </div>
+      <div className="font-dmmono flex-wrap flex absolute bottom-[10px] z-10 left-[50%]  justify-center -translate-x-1/2 -translate-y-1/2 md:flex-row flex-col items-center">
+        <input
+          type="email"
+          className="bg-white outline-none text-black md:p-4 p-2 px-6 rounded-full min-w-[300px] text-base m-1 h-fit"
+          placeholder={"your@address.com"}
+        />
+        <button className="text-base bg-[#c1ffb3] text-black font-semibold min-w-[250px] px-6 m-1 rounded-full p-2 md:p-4 h-fit">
+          Join the Waitlist
+        </button>
+      </div>
     </div>
   );
 };
