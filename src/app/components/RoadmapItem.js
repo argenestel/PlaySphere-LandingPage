@@ -8,7 +8,9 @@ const RoadmapItem = ({ sour, ind }) => {
         <div className="bg-red-400 w-full h-full relative">
           <Image src="/aboutbg.webp" layout="fill" objectFit="cover" />
           <div className="w-full h-[60%] absolute bottom-0 bg-gradient-to-b from-[#c1ffb3d9] to-[#e6ffe0] left-0 z-10 px-10 flex flex-col justify-center">
-            <h6 className="font-cc my-4 text-xl md:text-2xl">{sour.name}</h6>
+            <h6 className="font-cc my-4 text-xl md:text-2xl uppercase">
+              {sour.name}
+            </h6>
             <div className="font-dmmono md:text-base text-sm">
               <ul>
                 <li className="list-disc decoration-0 list-inside">
@@ -22,8 +24,8 @@ const RoadmapItem = ({ sour, ind }) => {
             </div>
           </div>
         </div>
-        <div className="absolute -bottom-1 font-cc right-10 z-20 text-[220px] text-gray-500">
-          <h1>{ind}</h1>
+        <div className="absolute bottom-[-60px] md:bottom-[-90px] font-cc right-[40px] z-20 text-[150px] md:text-[220px] text-[#0f0f0f] opacity-15">
+          <h1>{ind + 1}</h1>
         </div>
       </div>
     </>

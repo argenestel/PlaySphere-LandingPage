@@ -5,17 +5,19 @@ import Features from "./sections/Features";
 import Header from "./sections/Header";
 import Roadmap from "./sections/Roadmap";
 import Team from "./sections/Team";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
     <>
-    <Header/>
-    <About/>
-    <Benefits/>
-    <Features/>
-    <Roadmap/>
-    <Faq/>
-    <Team/>
+      <Navbar />
+      <Header />
+      <About />
+      <Benefits />
+      <Features />
+      <Roadmap />
+      <Faq />
+      <Team />
     </>
   );
 }

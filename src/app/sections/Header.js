@@ -5,7 +5,7 @@ const images = ["/image.png", "/image.png", "/image.png"];
 
 const Header = () => {
   return (
-    <div className="md:h-screen h-[85vh] p-3 relative text-white">
+    <div className="md:h-screen h-[85vh] p-3 relative text-white z-1">
       <div className="bg-white h-full w-full rounded-t-[60px] overflow-hidden">
         <div className="bg-black h-1/2 overflow-hidden">
           <ImageSlider images={images} />
