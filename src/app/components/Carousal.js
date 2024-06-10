@@ -52,7 +52,7 @@ const Carousal = ({images}) => {
               tabIndex={0}
               aria-label={`${label} ${index + 1}`}
             >
-              <div className={`rounded-full ${isSelected?'bg-[#c1ffb3]':'bg-[#c1ffb370]'} w-[8px] h-[8px]`}>
+              <div className={`rounded-full ${isSelected?'bg-soft-cyan':'bg-[#b2f3f380]'} w-[8px] h-[8px]`}>
               </div>
             </button>
           );

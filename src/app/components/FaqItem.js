@@ -12,7 +12,7 @@ const FaqItem = ({ ques, ans }) => {
                             onClick={() => {
                                 setVis(!vis);
                             }}
-                            className={`text-[#c1ffb3] text-[30px] font-bold transition ${vis ? "rotate-45" : ""}`}
+                            className={`text-white text-[30px] font-bold transition ${vis ? "rotate-45" : ""}`}
                         />
                     </div>
                     <div className="flex flex-col  ml-6 transition">
@@ -20,11 +20,15 @@ const FaqItem = ({ ques, ans }) => {
                             {ques}
                         </h5>
                         <p className={`${vis ? "" : "hidden"} transition font-dmmono text-sm mt-5 text-gray-300`}>
-                            {ans}
+                            {ans.split('\n').map((line,ind)=>{
+                                return <React.Fragment key={ind}>
+                                    {line} <br />
+                                </React.Fragment>   
+                            })}
                         </p>
                     </div>
                 </div>
-                <div className="w-full h-[1px] bg-[#c1ffb3]"></div>
+                <div className="w-full h-[1px] bg-gradient-to-r to-soft-pink from-soft-cyan"></div>
             </div>
         </>
     );

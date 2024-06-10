@@ -5,7 +5,7 @@ import Marquee from 'react-fast-marquee'
 const About = () => {
   return (
     <>
-      <div className='p-3'>
+      <div className='p-3' id='about'>
 
         <div className='mt-10'>
           <div className='bg-gradient-to-r from-soft-pink to-soft-cyan text-black py-3'>

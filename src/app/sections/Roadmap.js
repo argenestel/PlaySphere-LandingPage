@@ -27,30 +27,50 @@ const RightArrow = (props) => {
 
 const roadmap = [
   {
-    name: "Planning and Foundation",
-    item1: "Conceptualization",
-    item2: "Conceptualization",
-    item3: "Conceptualization",
-    item4: "Conceptualization",
-    item5: "Conceptualization",
+    "name": "Foundation",
+    "items": [
+      "Inception (Conceptualize vision, mechanics, target audience)",
+      "Asset Creation (Design characters, environments, UI elements)",
+      "Game Creation (Implement core mechanics, blockchain integration)",
+      "AR Integration (Develop AR features for immersion)",
+      "Aptos Integration (Integrate with Aptos blockchain)"
+    ]
+    , "img": '/2.svg'
   },
   {
-    name: "Planning and Foundation",
-    item1: "Conceptualization",
-    item2: "Conceptualization",
-    item3: "Conceptualization",
-    item4: "Conceptualization",
-    item5: "Conceptualization",
+    "name": "Community Building",
+    "items": [
+      "Alpha Development (Internal testing, bug fixing)",
+      "Social Media Presence (Launch channels, begin marketing)",
+      "Community Building (Foster engaged community)",
+      "NFT Announcement (Reveal NFT collection details)",
+      "Wallet Whitelisting for Free Mints (Early supporters mint for free)"
+    ]
+    , "img": '/2.svg'
   },
   {
-    name: "Planning and Foundation",
-    item1: "Conceptualization",
-    item2: "Conceptualization",
-    item3: "Conceptualization",
-    item4: "Conceptualization",
-    item5: "Conceptualization",
+    "name": "Testing and Refinement",
+    "items": [
+      "Selecting Beta Testers (Invite diverse group for testing)",
+      "Beta Release (Launch closed beta version)",
+      "Incentivized Beta Testing (Reward testers with NFTs, tokens)",
+      "Gather feedback and iterate based on insights"
+    ]
+    , "img": '/3.svg'
   },
-];
+  {
+    "name": "Launch and Expansion",
+    "items": [
+      "Mainnet Launch (Full game release on Aptos mainnet)",
+      "Community Expansion (Expand marketing, influencer collaborations)",
+      "[Redacted] (Mysterious high-impact update)",
+      "Continuous updates and community engagement"
+    ]
+    , "img": '/8.svg'
+  }
+]
+
+
 
 const Roadmap = () => {
   const settings = {
@@ -76,25 +96,25 @@ const Roadmap = () => {
   };
   return (
     <>
-      <div className="text-black slider-container p-3  w-full">
+      <div id="roadmap" className="text-black slider-container p-3  w-full">
         <Slider {...settings}>
           <div
             style={{ width: 300 }}
             className="w-[560px] md:w-[560px]  md:h-[100vh] h-[90vh]"
           >
-            <div className="rounded-[50px] bg-gradient-to-b from-[#c1ffb3] to-white mx-2 h-full p-4 overflow-hidden">
+            <div className="rounded-[50px] bg-gradient-to-b from-soft-pink to-soft-cyan mx-2 h-full p-4 overflow-hidden">
               <div className="flex justify-center items-center w-full h-full -rotate-90">
-                <h2 className="font-cc text-3xl md:text-6xl m-2">ROADMAP</h2>
+                <h2 className="font-cc text-6xl m-2">ROADMAP</h2>
               </div>
             </div>
           </div>
-          {roadmap.map((item, ind)=>{
-      return <div
-        style={{ width: 650 }}
-        className="w-[560px] md:w-[560px] md:h-[100vh] h-[90vh]"
-      >
-        <RoadmapItem sour={item} ind={ind} />
-      </div>
+          {roadmap.map((item, ind) => {
+            return <div
+              style={{ width: 650 }}
+              className="w-[560px] md:w-[560px] md:h-[100vh] h-[90vh]"
+            >
+              <RoadmapItem sour={item} ind={ind} />
+            </div>
           })}
         </Slider>
       </div>

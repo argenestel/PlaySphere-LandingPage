@@ -20,6 +20,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth !important;
 }
 
 body {
@@ -31,6 +32,19 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: cyan;
+  border-radius: 10px;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+  z-index: 19;
 }
 
 .carousel-slider {

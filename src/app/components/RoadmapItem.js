@@ -6,20 +6,18 @@ const RoadmapItem = ({ sour, ind }) => {
     <>
       <div className="rounded-[50px] bg-green-100 mx-2 h-full overflow-hidden relative">
         <div className="bg-red-400 w-full h-full relative">
-          <Image src="/aboutbg.webp" layout="fill" objectFit="cover" />
-          <div className="w-full h-[60%] absolute bottom-0 bg-gradient-to-b from-[#c1ffb3d9] to-[#e6ffe0] left-0 z-10 px-10 flex flex-col justify-center">
+          <Image src={sour.img} layout="fill" objectFit="cover" />
+          <div className="w-full h-[60%] absolute bottom-0 bg-gradient-to-b to-[#b2f3f3e0] from-[#fdb0c0e0] left-0 z-10 px-10 flex flex-col justify-center">
             <h6 className="font-cc my-4 text-xl md:text-2xl uppercase">
               {sour.name}
             </h6>
             <div className="font-dmmono md:text-base text-sm">
               <ul>
-                <li className="list-disc decoration-0 list-inside">
-                  {sour.item1}
+                {sour.items.map((item,ind)=>{
+                  return <li key={ind} className="list-disc decoration-0 list-inside">
+                  {item}
                 </li>
-                <li className="list-disc list-inside my-3">{sour.item2}</li>
-                <li className="list-disc list-inside my-3">{sour.item3}</li>
-                <li className="list-disc list-inside my-3">{sour.item4}</li>
-                <li className="list-disc list-inside my-3">{sour.item5}</li>
+                })}
               </ul>
             </div>
           </div>

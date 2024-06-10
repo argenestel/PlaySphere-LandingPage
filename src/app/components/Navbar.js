@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaTelegramPlane, FaTwitter, FaInstagram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -7,12 +7,6 @@ import './Navbar.css';
 import Link from "next/link";
 
 const Navbar = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const toggleNavbar = () => {
-    setIsExpanded(!isExpanded);
-  };
-  const [raised, setRaised] = useState(false);
 
   return (
     <>
@@ -28,8 +22,6 @@ const Navbar = () => {
           </a>
         </div>
         <div
-          onMouseOver={() => setRaised(true)}
-          onMouseOut={() => setRaised(false)}
           className={`hamburgout hover:w-[400px] md:hover:w-[500px] relative cursor-pointer rounded-full bg-[#0f0f0f80] backdrop-blur-xl flex items-center justify-center p-2`}
         >
           <div className="hamburgin h-[40px] w-[40px] md:h-[60px] md:w-[60px] flex items-center justify-center bg-soft-cyan rounded-full">
@@ -37,11 +29,11 @@ const Navbar = () => {
           </div>
           <div className="hamburgcont">
             <Link className="hamblink md:text-base text-sm md:m-3 m-1 hover:text-soft-cyan hover:underline font-dmmono" href="/">Home</Link>
-            <Link className="hamblink md:text-base text-sm md:m-3 m-1 hover:text-soft-cyan hover:underline font-dmmono" href="/">Story</Link>
-            <Link className="hamblink md:text-base text-sm md:m-3 m-1 hover:text-soft-cyan hover:underline font-dmmono" href="/">Benefits</Link>
-            <Link className="hamblink md:text-base text-sm md:m-3 m-1 hover:text-soft-cyan hover:underline font-dmmono" href="/">Roadmap</Link>
-            <Link className="hamblink md:text-base text-sm md:m-3 m-1 hover:text-soft-cyan hover:underline font-dmmono" href="/">FAQ</Link>
-            <Link className="hamblink md:text-base text-sm md:m-3 m-1 hover:text-soft-cyan hover:underline font-dmmono" href="/">Team</Link>
+            <Link className="hamblink md:text-base text-sm md:m-3 m-1 hover:text-soft-cyan hover:underline font-dmmono" href="#about">Story</Link>
+            <Link className="hamblink md:text-base text-sm md:m-3 m-1 hover:text-soft-cyan hover:underline font-dmmono" href="#benefits">Benefits</Link>
+            <Link className="hamblink md:text-base text-sm md:m-3 m-1 hover:text-soft-cyan hover:underline font-dmmono" href="#roadmap">Roadmap</Link>
+            <Link className="hamblink md:text-base text-sm md:m-3 m-1 hover:text-soft-cyan hover:underline font-dmmono" href="#faq">FAQ</Link>
+            <Link className="hamblink md:text-base text-sm md:m-3 m-1 hover:text-soft-cyan hover:underline font-dmmono" href="#team">Team</Link>
           </div>
         </div>
         <div className="sideicon md:flex hidden bg-[#0f0f0f80] backdrop-blur-xl mx-1 p-3 rounded-full">
