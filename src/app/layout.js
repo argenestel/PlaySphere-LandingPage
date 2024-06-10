@@ -17,7 +17,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Playsphere",
+  title: "Aptos Victors",
   description: "Welcome to Playsphere, a cutting-edge web3 organization that specializes in gaming, web3 superapp development on the Aptos blockchain, and a variety of other exciting projects. We are passionate about pushing the boundaries of what's possible in the world of decentralized technology.",
 };
 
