@@ -1,36 +1,42 @@
 import React from "react";
 import ImageSlider from "../components/ImageSlider";
 
-const images = ["/image.png", "/image.png", "/image.png"];
+const images = [
+  "/1.png", "/2.png", "/3.png", "/4.png", "/5.png", "/6.png",
+  "/7.png", "/8.png", "/9.png", "/10.png", "/11.png", "/12.png",
+  "/13.png", "/14.png", "/15.png", "/16.png", "/17.png", "/18.png",
+  "/20.png"
+];
 
 const Header = () => {
   return (
     <div className="md:h-screen h-[85vh] p-3 relative text-white z-1">
-      <div className="bg-white h-full w-full rounded-t-[60px] overflow-hidden">
-        <div className="bg-black h-1/2 overflow-hidden">
+      <div className="bg-[#1a1a1a] h-full w-full rounded-t-[60px] overflow-hidden">
+        <div className="bg-gradient-to-r from-soft-purple to-soft-cyan h-1/2 overflow-hidden">
           <ImageSlider images={images} />
         </div>
-        <div className="bg-black h-1 w-full"></div>
-        <div className="bg-black h-1/2 overflow-hidden">
+        <div className="bg-gradient-to-r from-soft-cyan to-soft-purple h-1 w-full"></div>
+        <div className="bg-gradient-to-r from-soft-purple to-soft-cyan h-1/2 overflow-hidden">
           <ImageSlider images={images} direction={"right"} />
         </div>
       </div>
-      <div className="opacity-100 z-10 backdrop-blur-xl absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 text-center bg-[#0f0f0f80] md:py-[30px] md:pb-[40px] md:px-[70px] py-[30px] rounded-[50px] md:w-fit w-[90%]  md:rounded-[100px]">
+      <div className="opacity-100 z-10 backdrop-blur-xl absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 text-center bg-[#0f0f0f80] md:py-[30px] md:pb-[40px] md:px-[70px] py-[30px] rounded-[50px] md:w-fit w-[90%] md:rounded-[100px]">
         <div>
-          <h2 className="font-cc text-2xl md:text-6xl my-3">APTOS VICTORS</h2>
+          <h2 className="font-cc text-2xl md:text-6xl my-3 text-soft-cyan">APTOS VICTORS</h2>
         </div>
         <div>
-          <p className="font-dmmono">
+          <p className="font-dmmono text-soft-pink">
+            Endless fun, decentralized style – welcome to Aptos Victors
           </p>
         </div>
       </div>
-      <div className="font-dmmono flex-wrap flex absolute bottom-[10px] z-10 left-[50%]  justify-center -translate-x-1/2 -translate-y-1/2 md:flex-row flex-col items-center">
+      <div className="font-dmmono flex-wrap flex absolute bottom-[10px] z-10 left-[50%] justify-center -translate-x-1/2 -translate-y-1/2 md:flex-row flex-col items-center">
         <input
           type="email"
-          className="bg-white outline-none text-black md:p-4 p-2 px-6 rounded-full min-w-[300px] text-base m-1 h-fit"
+          className="bg-[#1a1a1a] outline-none text-soft-pink md:p-4 p-2 px-6 rounded-full min-w-[300px] text-base m-1 h-fit"
           placeholder={"your@address.com"}
         />
-        <button className="text-base bg-[#c1ffb3] text-black font-semibold min-w-[250px] px-6 m-1 rounded-full p-2 md:p-4 h-fit">
+        <button className="text-base bg-gradient-to-r from-soft-pink to-soft-purple text-white font-semibold min-w-[250px] px-6 m-1 rounded-full p-2 md:p-4 h-fit">
           Join the Waitlist
         </button>
       </div>
