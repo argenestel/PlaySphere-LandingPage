@@ -16,14 +16,20 @@ module.exports = {
       animation: {
         slide: 'slide 20s linear infinite',
       },
-      fontFamily:{
-        cc:['var(--font-cc)'],
-        dmmono:['var(--font-dmmono)'],
+      fontFamily: {
+        cc: ['var(--font-cc)'],
+        dmmono: ['var(--font-dmmono)'],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      colors: {
+        'soft-cyan': '#8be9fd',
+        'soft-pink': '#ff79c6',
+        'soft-purple': '#bd93f9',
+        'soft-yellow': '#f1fa8c',
+        'soft-green': '#50fa7b',
       },
     },
   },
