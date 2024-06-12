@@ -16,11 +16,7 @@ const Navbar = () => {
             <FaTelegramPlane size={30} className="text-soft-cyan" />
           </a>
         </div>
-        <div className="sideicon md:flex hidden bg-[#0f0f0f80] backdrop-blur-xl mx-1 p-3 rounded-full">
-          <a href="https://twitter.com/aptosvictors" target="_blank" rel="noopener noreferrer">
-            <FaTwitter size={30} className="text-soft-cyan" />
-          </a>
-        </div>
+       
         <div
           className={`hamburgout hover:w-[400px] md:hover:w-[500px] relative cursor-pointer rounded-full bg-[#0f0f0f80] backdrop-blur-xl flex items-center justify-center p-2`}
         >
@@ -37,15 +33,20 @@ const Navbar = () => {
           </div>
         </div>
         <div className="sideicon md:flex hidden bg-[#0f0f0f80] backdrop-blur-xl mx-1 p-3 rounded-full">
+          <a href="https://twitter.com/aptosvictors" target="_blank" rel="noopener noreferrer">
+            <FaTwitter size={30} className="text-soft-cyan" />
+          </a>
+        </div>
+        {/* <div className="sideicon md:flex hidden bg-[#0f0f0f80] backdrop-blur-xl mx-1 p-3 rounded-full">
           <a href="https://instagram.com/aptosvictors" target="_blank" rel="noopener noreferrer">
             <FaInstagram size={30} className="text-soft-cyan" />
           </a>
-        </div>
-        <div className="sideicon md:flex hidden bg-[#0f0f0f80] backdrop-blur-xl mx-1 p-3 rounded-full">
+        </div> */}
+        {/* <div className="sideicon md:flex hidden bg-[#0f0f0f80] backdrop-blur-xl mx-1 p-3 rounded-full">
           <a href="mailto:info@aptosvictors.com">
             <MdEmail size={30} className="text-soft-cyan" />
           </a>
-        </div>
+        </div> */}
       </header>
     </>
   );

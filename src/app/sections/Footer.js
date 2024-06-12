@@ -37,7 +37,8 @@ const Footer = () => {
                 </div>
                 <div className="bg-black h-[1px] w-full"></div>
                 <div className="text-black text-xs m-1 md:text-left text-center">
-                    <p>© 2024 Playsphere Labs</p>
+                    <p>© 2024 Aptos Victors. All rights reserved.</p>
+                    <p>Powered by Aptos</p>
                 </div>
             </div>
         </>

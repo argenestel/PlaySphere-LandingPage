@@ -3,8 +3,7 @@ import Carousal from "../components/Carousal";
 import { RiSparkling2Fill } from "react-icons/ri";
 
 const images = [
-  "/1.png", "/2.png", "/3.png", "/4.png", "/5.png", "/6.png",
-  "/7.png"
+  "/1.png", "/7.png", "/13.png", "/16.png", "/18.png", "/6.png",
 ];
 
 const benefits = [

@@ -35,7 +35,7 @@ const roadmap = [
       "AR Integration (Develop AR features for immersion)",
       "Aptos Integration (Integrate with Aptos blockchain)"
     ]
-    , "img": '/2.svg'
+    , "img": '/cityline.jpg'
   },
   {
     "name": "Community Building",
@@ -46,7 +46,7 @@ const roadmap = [
       "NFT Announcement (Reveal NFT collection details)",
       "Wallet Whitelisting for Free Mints (Early supporters mint for free)"
     ]
-    , "img": '/2.svg'
+    , "img": '/cyber.png'
   },
   {
     "name": "Testing and Refinement",
@@ -56,7 +56,7 @@ const roadmap = [
       "Incentivized Beta Testing (Reward testers with NFTs, tokens)",
       "Gather feedback and iterate based on insights"
     ]
-    , "img": '/3.svg'
+    , "img": '/nature.jpg'
   },
   {
     "name": "Launch and Expansion",
@@ -66,7 +66,7 @@ const roadmap = [
       "[Redacted] (Mysterious high-impact update)",
       "Continuous updates and community engagement"
     ]
-    , "img": '/8.svg'
+    , "img": '/steampunk.png'
   }
 ]
 

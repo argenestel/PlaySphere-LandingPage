@@ -8,7 +8,7 @@ const team = [{
   "name": "@ShivaRK",
   "position": "Web developer"
 }, {
-  "image": "/5.png",
+  "image": "/4.png",
   "name": "@ShivaRK",
   "position": "Web developer"
 }, {
