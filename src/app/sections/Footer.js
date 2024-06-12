@@ -26,7 +26,7 @@ const Footer = () => {
                     <div className="text-black flex flex-col font-cc">
                         <div className="flex justify-center items-center my-2">
                             <LuSparkle />
-                            <h6>PLAYSPHERE</h6>
+                            <h6>Aptos Victors</h6>
                         </div>
                         <div className="flex justify-center text-[20px] my-2">
                             <LuTwitter className="mx-3" />
