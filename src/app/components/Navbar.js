@@ -33,7 +33,7 @@ const Navbar = () => {
             <Link className="hamblink md:text-base text-sm md:m-3 m-1 hover:text-soft-cyan hover:underline font-dmmono" href="#benefits">Benefits</Link>
             <Link className="hamblink md:text-base text-sm md:m-3 m-1 hover:text-soft-cyan hover:underline font-dmmono" href="#roadmap">Roadmap</Link>
             <Link className="hamblink md:text-base text-sm md:m-3 m-1 hover:text-soft-cyan hover:underline font-dmmono" href="#faq">FAQ</Link>
-            <Link className="hamblink md:text-base text-sm md:m-3 m-1 hover:text-soft-cyan hover:underline font-dmmono" href="#team">Team</Link>
+            <Link className="hamblink md:text-base text-sm md:m-3 m-1 hover:text-soft-cyan hover:underline font-dmmono" href="#sneakpeek">SneakPeek</Link>
           </div>
         </div>
         <div className="sideicon md:flex hidden bg-[#0f0f0f80] backdrop-blur-xl mx-1 p-3 rounded-full">

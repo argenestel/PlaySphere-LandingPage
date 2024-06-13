@@ -12,7 +12,7 @@ const LeftArrow = (props) => {
   const { className, style, onClick } = props;
   return (
     <div onClick={onClick} className={`arrow ${className}`}>
-      <FaChevronLeft class="arrows" style={{ color: "white" }} />
+      <FaChevronLeft className="arrows" style={{ color: "white" }} />
     </div>
   );
 };
@@ -20,7 +20,7 @@ const RightArrow = (props) => {
   const { className, style, onClick } = props;
   return (
     <div onClick={onClick} className={`arrow ${className}`}>
-      <FaChevronRight class="arrows" style={{ color: "white" }} />
+      <FaChevronRight className="arrows" style={{ color: "white" }} />
     </div>
   );
 };
@@ -35,7 +35,7 @@ const roadmap = [
       "AR Integration (Develop AR features for immersion)",
       "Aptos Integration (Integrate with Aptos blockchain)"
     ]
-    , "img": '/2.svg'
+    , "img": '/bg1.jpg'
   },
   {
     "name": "Community Building",
@@ -46,7 +46,7 @@ const roadmap = [
       "NFT Announcement (Reveal NFT collection details)",
       "Wallet Whitelisting for Free Mints (Early supporters mint for free)"
     ]
-    , "img": '/2.svg'
+    , "img": '/bg2.jpg'
   },
   {
     "name": "Testing and Refinement",
@@ -56,7 +56,7 @@ const roadmap = [
       "Incentivized Beta Testing (Reward testers with NFTs, tokens)",
       "Gather feedback and iterate based on insights"
     ]
-    , "img": '/3.svg'
+    , "img": '/bg3.jpg'
   },
   {
     "name": "Launch and Expansion",
@@ -66,7 +66,7 @@ const roadmap = [
       "[Redacted] (Mysterious high-impact update)",
       "Continuous updates and community engagement"
     ]
-    , "img": '/8.svg'
+    , "img": '/city.jpg'
   }
 ]
 
@@ -110,6 +110,7 @@ const Roadmap = () => {
           </div>
           {roadmap.map((item, ind) => {
             return <div
+              key={ind}
               style={{ width: 650 }}
               className="w-[560px] md:w-[560px] md:h-[100vh] h-[90vh]"
             >

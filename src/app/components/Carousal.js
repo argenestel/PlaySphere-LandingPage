@@ -59,7 +59,7 @@ const Carousal = ({images}) => {
         }}
       >
         {images.map((src,ind)=>{
-          return <div className="w-full h-full">
+          return <div key={ind} className="w-full h-full">
           <img className="w-full md:h-[80vh] h-[400px] object-cover" alt="car-img" src={src} />
         </div>
         })}

@@ -1,16 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
-import { LuFacebook, LuInstagram, LuSparkle, LuTwitter } from "react-icons/lu";
-
+import {  LuInstagram, LuSparkle, LuTwitter } from "react-icons/lu";
+import { FaTelegramPlane } from "react-icons/fa";
 const Footer = () => {
     return (
         <>
             <div className="p-10 w-full font-dmmono">
-                <div className="bg-black h-[1px] w-full"></div>
-                <div className="flex md:flex-row w-full flex-col justify-evenly items-center py-10">
-                    <Image alt="qrcode" className="m-4" src='/qr.png' width={250} height={250}/>
-                    <h3 className="text-center font-cc text-xl md:text-3xl text-black uppercase">Scan this QR to bring Victors to your room </h3>
-                </div>
+                {/* <div className="bg-black h-[1px] w-full"></div> */}
                 <div className="bg-black h-[1px] w-full"></div>
                 <div className="flex md:flex-row flex-col justify-between py-10">
                     <div className="flex  justify-center md:flex-row flex-col items-center">
@@ -29,9 +26,9 @@ const Footer = () => {
                             <h6>PLAYSPHERE</h6>
                         </div>
                         <div className="flex justify-center text-[20px] my-2">
-                            <LuTwitter className="mx-3" />
-                            <LuInstagram className="mx-3" />
-                            <LuFacebook className="mx-3" />
+                            <Link href={'https://twitter.com/aptosvictors'}><LuTwitter className="mx-3 cursor-pointer"/></Link>
+                            <Link href={'https://instagram.com/aptosvictors'}><LuInstagram className="mx-3 cursor-pointer"/></Link>
+                            <Link href={'https://t.me/aptosvictors'}><FaTelegramPlane className="mx-3 cursor-pointer"/></Link>
                         </div>
                     </div>
                 </div>

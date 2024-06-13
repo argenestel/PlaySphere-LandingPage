@@ -7,7 +7,7 @@ const ImageSlider = ({images,direction}) => {
     <>
     <Marquee autoFill direction={direction}>
       {images.map((src,ind)=>{
-        return <Image className='ml-1 mb-1' key={ind} alt='slide' src={src} width={'335'} height={100}/>
+        return <Image className='ml-1 mb-1' priority key={ind} alt='slide' src={src} width={'335'} height={100}/>
       })}
     </Marquee>
     </>
