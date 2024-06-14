@@ -12,7 +12,7 @@ const LeftArrow = (props) => {
   const { className, style, onClick } = props;
   return (
     <div onClick={onClick} className={`arrow ${className}`}>
-      <FaChevronLeft class="arrows" style={{ color: "white" }} />
+      <FaChevronLeft className="arrows" style={{ color: "white" }} />
     </div>
   );
 };
@@ -20,7 +20,7 @@ const RightArrow = (props) => {
   const { className, style, onClick } = props;
   return (
     <div onClick={onClick} className={`arrow ${className}`}>
-      <FaChevronRight class="arrows" style={{ color: "white" }} />
+      <FaChevronRight className="arrows" style={{ color: "white" }} />
     </div>
   );
 };
@@ -110,6 +110,7 @@ const Roadmap = () => {
           </div>
           {roadmap.map((item, ind) => {
             return <div
+              key={ind}
               style={{ width: 650 }}
               className="w-[560px] md:w-[560px] md:h-[100vh] h-[90vh]"
             >
