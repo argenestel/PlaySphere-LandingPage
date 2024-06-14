@@ -13,6 +13,10 @@ const Header = () => {
   const redirectToDashboard = () => {
     window.location.href = "https://dashboard.aptosvictors.xyz";
   };
+  const redirectToDocs =() => {
+    window.location.href = "https://aptos-victors.gitbook.io/aptos-victors";
+  
+  }
 
   return (
     <div className="md:h-screen h-[85vh] p-3 relative text-white z-1">
@@ -41,6 +45,12 @@ const Header = () => {
           onClick={redirectToDashboard}
         >
           Dashboard
+        </button>
+        <button
+          className="text-base bg-gradient-to-r from-soft-pink to-soft-purple text-white font-semibold min-w-[250px] px-6 m-1 rounded-full p-2 md:p-4 h-fit"
+          onClick={redirectToDocs}
+        >
+          Docs
         </button>
       </div>
     </div>
