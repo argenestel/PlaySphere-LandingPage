@@ -4,8 +4,9 @@ import Faq from "./sections/Faq";
 import Features from "./sections/Features";
 import Header from "./sections/Header";
 import Roadmap from "./sections/Roadmap";
-import Team from "./sections/Team";
+// import Team from "./sections/Team";
 import Navbar from "./components/Navbar";
+import SneakPeek from "./sections/SneakPeek";
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
       {/* <Features /> */}
       <Roadmap />
       <Faq />
-      <Team />
+      <SneakPeek/>
     </>
   );
 }

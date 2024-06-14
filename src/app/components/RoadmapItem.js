@@ -6,7 +6,7 @@ const RoadmapItem = ({ sour, ind }) => {
     <>
       <div className="rounded-[50px] bg-green-100 mx-2 h-full overflow-hidden relative">
         <div className="bg-red-400 w-full h-full relative">
-          <Image src={sour.img} layout="fill" objectFit="cover" />
+          <Image src={sour.img} width={500} height={500} className="w-full h-full object-cover" />
           <div className="w-full h-[60%] absolute bottom-0 bg-gradient-to-b to-[#b2f3f3e0] from-[#fdb0c0e0] left-0 z-10 px-10 flex flex-col justify-center">
             <h6 className="font-cc my-4 text-xl md:text-2xl uppercase">
               {sour.name}
